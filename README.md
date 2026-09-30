@@ -17,6 +17,18 @@ tags:
 
 # Mamb2_8B_FP4_Recall_SQ3.25
 
+**Official WikiText-2 test PPL — Resurface on: 7.50813901.**
+
+| Published configuration | Resurface adapter | Official WT2 test PPL |
+|---|---|---:|
+| Same frozen weights and SQ3.25 state | Off | 8.32723482 |
+| Same frozen weights and SQ3.25 state | On | **7.50813901** |
+
+**147 reset windows · 300,963 next-token targets**, including the final partial
+window. Measured with the published `PredictorState` group-ridge codec: carry is
+requantized **after every token**, with FP16 computation and FP32 logits.
+The checkpoint was fixed before test evaluation; no test-driven training or selection.
+
 A member of the **Mamb2_8B_Recall** family, combining a quantized pure
 Mamba-2 8B base, a packed 3.25-bit recurrent-state row, a frozen group-ridge
 state predictor, and a Resurface adapter trained for this exact configuration.
