@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+artifacts/
+reports/
+logs/
+weights/
+*.safetensors
+*.pt
+*.model
+*.log
+.DS_Store

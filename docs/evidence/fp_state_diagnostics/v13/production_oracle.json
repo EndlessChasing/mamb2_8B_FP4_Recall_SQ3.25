@@ -1,0 +1,401 @@
+{
+  "format": "FP4_FP_STATE_DIAGNOSIS_V13",
+  "complete": true,
+  "reference_checks": {
+    "passed": true,
+    "fp4_ties": [
+      0.25,
+      0.75,
+      1.25,
+      1.75,
+      2.5,
+      3.5,
+      5.0
+    ],
+    "fp4_even_codes": [
+      0,
+      2,
+      2,
+      4,
+      4,
+      6,
+      6
+    ],
+    "fp8_finite_bit_patterns": 254,
+    "fp8_unique_values": 253,
+    "reference": "Explicit IEEE E4M3FN exponent/sign decode and table nearest-even; no torch conversion"
+  },
+  "source_sha256": "3f288aa2d29ba94ce8528f79b86d9ed0794ff9da65a939f883d693ad90fc81f7",
+  "production_storage_oracle": {
+    "passed": true,
+    "tests": [
+      {
+        "mode": "parent",
+        "layout": "32_32_64",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "16_64_48",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "8_80_40",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "24_48_56",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "36_24_68",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "40_16_72",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "parent",
+        "layout": "44_8_76",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "32_32_64",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "16_64_48",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "8_80_40",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "24_48_56",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "36_24_68",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "40_16_72",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_int4",
+        "layout": "44_8_76",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "32_32_64",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "16_64_48",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "8_80_40",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "24_48_56",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "36_24_68",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "40_16_72",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "int8_fp4",
+        "layout": "44_8_76",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "32_32_64",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "16_64_48",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "8_80_40",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "24_48_56",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "36_24_68",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "40_16_72",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      },
+      {
+        "mode": "fp8_fp4",
+        "layout": "44_8_76",
+        "cases": 1146,
+        "row_bytes": 52,
+        "mismatched_bytes": {
+          "lo": 0,
+          "hi": 0,
+          "q4": 0,
+          "s8": 0,
+          "s4": 0
+        }
+      }
+    ],
+    "independent_scalar_quantization": true,
+    "actual_production_codec_sha256": "ca4e9590fe33cc715ea6083226b0365a0842d6a9eff2333274795aaa55c60786"
+  },
+  "elapsed_seconds": 5.6139442920684814
+}

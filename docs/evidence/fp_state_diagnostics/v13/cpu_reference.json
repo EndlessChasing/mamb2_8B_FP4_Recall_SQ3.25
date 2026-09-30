@@ -1,0 +1,30 @@
+{
+  "format": "FP4_FP_STATE_DIAGNOSIS_V13",
+  "complete": true,
+  "reference_checks": {
+    "passed": true,
+    "fp4_ties": [
+      0.25,
+      0.75,
+      1.25,
+      1.75,
+      2.5,
+      3.5,
+      5.0
+    ],
+    "fp4_even_codes": [
+      0,
+      2,
+      2,
+      4,
+      4,
+      6,
+      6
+    ],
+    "fp8_finite_bit_patterns": 254,
+    "fp8_unique_values": 253,
+    "reference": "Explicit IEEE E4M3FN exponent/sign decode and table nearest-even; no torch conversion"
+  },
+  "source_sha256": "866ecb1595827c7ea95361f45ee1e015005f463ab44a132e7ecc0a39b73affe1",
+  "elapsed_seconds": 0.00014209747314453125
+}

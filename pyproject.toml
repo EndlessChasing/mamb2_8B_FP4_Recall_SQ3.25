@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mamb2-8b-w4a16-recall-statequant"
+version = "0.1.0"
+description = "W4A16 pure Mamba2-8B with Q3.25 recurrent state and fresh Resurface training"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "torch>=2.6", "triton>=3.0", "sentencepiece", "datasets", "huggingface-hub", "einops"]
+
+[tool.setuptools.packages.find]
+include = ["mamba2_recall*"]

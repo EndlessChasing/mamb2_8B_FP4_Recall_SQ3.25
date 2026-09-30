@@ -1,0 +1,286 @@
+{
+  "format": "FP4_FP_STATE_CODEC_CHECK_V12",
+  "passed": true,
+  "layouts": [
+    {
+      "mode": "parent",
+      "layout": "32_32_64",
+      "n8": 32,
+      "n4": 28,
+      "nzero": 68,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "16_64_48",
+      "n8": 16,
+      "n4": 60,
+      "nzero": 52,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "8_80_40",
+      "n8": 8,
+      "n4": 76,
+      "nzero": 44,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "24_48_56",
+      "n8": 24,
+      "n4": 44,
+      "nzero": 60,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "36_24_68",
+      "n8": 36,
+      "n4": 20,
+      "nzero": 72,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "40_16_72",
+      "n8": 40,
+      "n4": 12,
+      "nzero": 76,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 1.52587890625e-05,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "parent",
+      "layout": "44_8_76",
+      "n8": 44,
+      "n4": 4,
+      "nzero": 80,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "32_32_64",
+      "n8": 32,
+      "n4": 28,
+      "nzero": 68,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "16_64_48",
+      "n8": 16,
+      "n4": 60,
+      "nzero": 52,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "8_80_40",
+      "n8": 8,
+      "n4": 76,
+      "nzero": 44,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "24_48_56",
+      "n8": 24,
+      "n4": 44,
+      "nzero": 60,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "36_24_68",
+      "n8": 36,
+      "n4": 20,
+      "nzero": 72,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "40_16_72",
+      "n8": 40,
+      "n4": 12,
+      "nzero": 76,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_int4",
+      "layout": "44_8_76",
+      "n8": 44,
+      "n4": 4,
+      "nzero": 80,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "32_32_64",
+      "n8": 32,
+      "n4": 28,
+      "nzero": 68,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "16_64_48",
+      "n8": 16,
+      "n4": 60,
+      "nzero": 52,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "8_80_40",
+      "n8": 8,
+      "n4": 76,
+      "nzero": 44,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "24_48_56",
+      "n8": 24,
+      "n4": 44,
+      "nzero": 60,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "36_24_68",
+      "n8": 36,
+      "n4": 20,
+      "nzero": 72,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "40_16_72",
+      "n8": 40,
+      "n4": 12,
+      "nzero": 76,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "int8_fp4",
+      "layout": "44_8_76",
+      "n8": 44,
+      "n4": 4,
+      "nzero": 80,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 3.814697265625e-06,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "32_32_64",
+      "n8": 32,
+      "n4": 28,
+      "nzero": 68,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "16_64_48",
+      "n8": 16,
+      "n4": 60,
+      "nzero": 52,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "8_80_40",
+      "n8": 8,
+      "n4": 76,
+      "nzero": 44,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "24_48_56",
+      "n8": 24,
+      "n4": 44,
+      "nzero": 60,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "36_24_68",
+      "n8": 36,
+      "n4": 20,
+      "nzero": 72,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "40_16_72",
+      "n8": 40,
+      "n4": 12,
+      "nzero": 76,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    },
+    {
+      "mode": "fp8_fp4",
+      "layout": "44_8_76",
+      "n8": 44,
+      "n4": 4,
+      "nzero": 80,
+      "row_bytes": 52,
+      "first_token_max_abs_error": 0.0,
+      "partition_max_abs_error": 0.0
+    }
+  ]
+}

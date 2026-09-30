@@ -1,0 +1,84 @@
+{
+  "complete": true,
+  "diagnosis_link_replacements": {
+    "../artifacts/fp4_zero_predictor_v1/fp_state_diag_v13_endpoints/audit.json": "evidence/fp_state_diagnostics/v13/endpoints_audit.json",
+    "../artifacts/fp4_zero_predictor_v1/fp_state_screen_v12c/audit.json": "evidence/fp_state_diagnostics/v12/audit.json",
+    "../artifacts/fp4_zero_predictor_v1/group_ridge_full_v1/audit.json": "evidence/fp_state_diagnostics/parent_full_audit.json",
+    "../artifacts/fp4_zero_predictor_v1/selective_screen_v14/audit.json": "evidence/fp_state_diagnostics/v14/audit.json"
+  },
+  "files": {
+    "parent_full_audit.json": {
+      "bytes": 592,
+      "format": "FP4_GROUP_RIDGE_QUALITY_AUDIT_V1",
+      "sha256": "ad1118aeebd7b832ac7ee8becf7c0e71862d343a727110cb2ee80e1b97af334c",
+      "source": "artifacts/fp4_zero_predictor_v1/group_ridge_full_v1/audit.json"
+    },
+    "v12/audit.json": {
+      "bytes": 652,
+      "format": "FP4_FP_STATE_QUALITY_AUDIT_V12",
+      "sha256": "5394d7172fe4d251956f19214ca85bcf678466c214223a11573b40d9a619b071",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_screen_v12c/audit.json"
+    },
+    "v12/codec_fixture.json": {
+      "bytes": 6180,
+      "format": "FP4_FP_STATE_CODEC_CHECK_V12",
+      "sha256": "7cf1194ad52c5e58d8906e72dadc12e6548a4c3031e98b5e0c8c147a9b07bb13",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_codec_check_v12.json"
+    },
+    "v12/comparison.json": {
+      "bytes": 340252,
+      "format": "FP4_FP_STATE_QUALITY_V12_COMPARISON",
+      "sha256": "a73abc09d1eb4b0360e5b335e79844158d793c3a30f8b662182e2414fcd9eeb0",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_screen_v12c/comparison.json"
+    },
+    "v13/cpu_reference.json": {
+      "bytes": 615,
+      "format": "FP4_FP_STATE_DIAGNOSIS_V13",
+      "sha256": "c88faa58c5aace0e12d07a3fd34da5bf1c5dcc440f02c74dbee8332e37a7fb86",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_diag_v13_cpu/report.json"
+    },
+    "v13/endpoints_audit.json": {
+      "bytes": 4114,
+      "format": "FP4_FP_STATE_DIAGNOSIS_V13_CPU_AUDIT",
+      "sha256": "309b2fe5a0cf48dbf28ab6bdcecdc3bacf7aba6f8ee798dd75396c3ce660fe0c",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_diag_v13_endpoints/audit.json"
+    },
+    "v13/endpoints_report.json": {
+      "bytes": 1623226,
+      "format": "FP4_FP_STATE_DIAGNOSIS_V13",
+      "sha256": "a8fb23dbeb54a35481847b24dda9cb9b77da08951a1df09c519990c8f33e7455",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_diag_v13_endpoints/report.json"
+    },
+    "v13/production_oracle.json": {
+      "bytes": 8007,
+      "format": "FP4_FP_STATE_DIAGNOSIS_V13",
+      "sha256": "3c4182e016dfd16a3da68f9ca4788ee033b5bf9acdfa252006bb465ecc44e850",
+      "source": "artifacts/fp4_zero_predictor_v1/fp_state_diag_v13_oracle/report.json"
+    },
+    "v14/audit.json": {
+      "bytes": 635,
+      "format": "FP4_SELECTIVE_STATE_QUALITY_AUDIT_V14",
+      "sha256": "3c45e6a1f70c99aaebeebf758c2b99014cae80a10344e3067c8c80e3c600c32d",
+      "source": "artifacts/fp4_zero_predictor_v1/selective_screen_v14/audit.json"
+    },
+    "v14/codec_fixture.json": {
+      "bytes": 3348,
+      "format": "FP4_SELECTIVE_STATE_CODEC_CHECK_V14",
+      "sha256": "afc47083b9da483383610c6a9ef7394db7039fbd83da3250e9d70522e5c4e032",
+      "source": "artifacts/fp4_zero_predictor_v1/selective_codec_check_v14.json"
+    },
+    "v14/comparison.json": {
+      "bytes": 299679,
+      "format": "FP4_SELECTIVE_STATE_QUALITY_V14_COMPARISON",
+      "sha256": "7fc1a5821a15ff23604645b39921a1076f93f5d537904a42e2a99ade703d13ef",
+      "source": "artifacts/fp4_zero_predictor_v1/selective_screen_v14/comparison.json"
+    }
+  },
+  "format": "MAMBA2_FP_STATE_DIAGNOSTIC_EVIDENCE_V1",
+  "original_diagnosis_sha256": "b66da5e542519139581978a26c6dc7e3d8c3df5a1c5beca900a488c51464fccc",
+  "packaged_diagnosis_sha256": "67a2d2f89b4746a80aa781cfdb77372da3cc433d3796a50783f348ccc6d88c3f",
+  "publication_quality_gate_unchanged": true,
+  "raw_training_tokens_included": false,
+  "state_snapshot_tensors_included": false,
+  "supplemental_only": true
+}

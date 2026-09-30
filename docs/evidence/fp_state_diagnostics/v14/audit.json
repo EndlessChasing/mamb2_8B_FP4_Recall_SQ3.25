@@ -1,0 +1,20 @@
+{
+  "format": "FP4_SELECTIVE_STATE_QUALITY_AUDIT_V14",
+  "complete": true,
+  "passed": true,
+  "cuda_initialized": false,
+  "stage": "screen",
+  "input_report_sha256": "7fc1a5821a15ff23604645b39921a1076f93f5d537904a42e2a99ade703d13ef",
+  "source_sha256": "b281ebf31b56cd449a880567c7b9b86edb16c01f54393795b7ffe7bc4d23e106",
+  "selected_id": "parent",
+  "target_tokens": 32752,
+  "ppl": {
+    "parent": 8.406065636256484,
+    "proxy_top6": 8.433642089861635,
+    "proxy_except_bad": 8.623837446969981,
+    "restored_parent": 8.406065636256484
+  },
+  "advance_to_full": false,
+  "target_pass": false,
+  "parent_restoration_exact": true
+}

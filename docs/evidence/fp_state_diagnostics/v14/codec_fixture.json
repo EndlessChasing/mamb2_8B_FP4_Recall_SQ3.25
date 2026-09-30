@@ -1,0 +1,123 @@
+{
+  "format": "FP4_SELECTIVE_STATE_CODEC_CHECK_V14",
+  "passed": true,
+  "layouts": [
+    {
+      "layout": "32_32_64",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "16_64_48",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "8_80_40",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "24_48_56",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "36_24_68",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "40_16_72",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "44_8_76",
+      "use_fp4": false,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "32_32_64",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "16_64_48",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "8_80_40",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "24_48_56",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "36_24_68",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "40_16_72",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    },
+    {
+      "layout": "44_8_76",
+      "use_fp4": true,
+      "row_bytes": 52,
+      "partition_max_abs_error": 0.0,
+      "mismatched_state_buffers": [],
+      "wrong_declared_mode_rejected": true
+    }
+  ],
+  "code_sha256": {
+    "scripts/fp4_selective_state_codec_v14.py": "4e22a88efcd6e555cf823724ade07111fc92d82f1c453b2184b09d5c0d631140",
+    "scripts/fp4_fp_state_codec_v12.py": "ca4e9590fe33cc715ea6083226b0365a0842d6a9eff2333274795aaa55c60786",
+    "scripts/check_fp4_selective_state_codec_v14.py": "7d3a489c01ee1688839c6166fd58c58ee0ecd7e47f0895f2e9eb0b8c16637411"
+  }
+}

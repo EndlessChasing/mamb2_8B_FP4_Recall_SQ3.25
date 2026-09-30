@@ -1,0 +1,19 @@
+{
+  "format": "FP4_GROUP_RIDGE_QUALITY_AUDIT_V1",
+  "complete": true,
+  "passed": true,
+  "cuda_initialized": false,
+  "stage": "full",
+  "input_report_sha256": "7ac5f4aeea0edd6fdd896896e17defa1caf5c396eb27fa846d36301b36af5df1",
+  "source_sha256": "6157c852cb4e8ea2bde0f5613c1fcbdaeeb0568c0db4e062098767e9dccd4917",
+  "selected_id": "replacement",
+  "target_tokens": 264764,
+  "ppl": {
+    "parent": 8.422636929932688,
+    "replacement": 8.408282583578627,
+    "restored_parent": 8.422636929932688
+  },
+  "advance_to_full": false,
+  "target_pass": false,
+  "parent_restoration_exact": true
+}
