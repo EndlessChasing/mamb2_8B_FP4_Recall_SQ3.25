@@ -1,0 +1,77 @@
+{
+  "format": "FP4_SQ325_RESURFACE_WT2_TEST_CPU_AUDIT_V1",
+  "complete": true,
+  "passed": true,
+  "uses_stdlib_only": true,
+  "cuda_initialized": false,
+  "input_report_sha256": "b9d1aa9537effc60a1aca062e4e99fd6fbcc16a971418ab37c7345b87a0b500a",
+  "protocol_sha256": "431fb26ecf97f3a4411e9e54319fc6d6c2f04b24274c8e2e7fa2a15d66170180",
+  "runner_sha256": "979dab9044fad2b1a35d2bf7802ce3854ac54631c371af8641523359e666110c",
+  "bundle_manifest_sha256": "130865c8e133cfa6a3298b114197a3791cbd6cdc9d33020e5f404c30fe807208",
+  "auditor_sha256": "73b7bcc03b6010f4f3d629de9fb3cb80262a23350cbe4e9e40b7d426e09061fc",
+  "dataset": {
+    "dataset": "Salesforce/wikitext",
+    "configuration": "wikitext-2-raw-v1",
+    "split": "test",
+    "revision_argument": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "dataset_fingerprint": "a46124b21ac53738",
+    "document_join": "two newline characters",
+    "text_sha256": "696cca6b65a171b0a358a4be6732cdfdf2dd6164a32e20fd70e3c13fc4dfae83",
+    "token_stream_sha256_int64le": "5b82bd46e833e77fcfc0af62bafeaac62e70e68cfdf214d375f0b7b132d4b608",
+    "total_tokens": 300964,
+    "tokenizer_sha256": "5862e2f71caf762bc9845662be5fec2867deb58d874568235a02a36c5111cd09",
+    "automatic_special_tokens": false
+  },
+  "token_stream_sha256_int64le": "5b82bd46e833e77fcfc0af62bafeaac62e70e68cfdf214d375f0b7b132d4b608",
+  "window_count": 147,
+  "target_tokens": 300963,
+  "last_window_targets": 1955,
+  "all_target_tokens_scored_once": true,
+  "final_partial_verified": true,
+  "all_window_token_hashes_verified": true,
+  "pooled_nll_ppl_arithmetic_verified": true,
+  "matched_off_on_population": true,
+  "ppl": {
+    "without_resurface": 8.327234815511874,
+    "resurface": 7.508139013005539
+  },
+  "nll": {
+    "without_resurface": 637900.5426273346,
+    "resurface": 606737.686252594
+  },
+  "ppl_relative_change": -0.09836348087369085,
+  "matched_windows_improved": 147,
+  "quality_threshold_applied": false,
+  "candidate_selection_performed": false,
+  "recorded_initial_final_and_arm_weight_hashes_match_all_507": true,
+  "recorded_adapter_hashes_match_final_224_tensor_export": true,
+  "complete_cache_and_static_counts_verified": true,
+  "memory": {
+    "persistent_state_side_bytes": 32284928,
+    "state_plus_adapter_bytes": 34593136,
+    "decoded_resident_weight_bytes": 16473999360
+  },
+  "recorded_cuda_memory": {
+    "without_resurface": {
+      "peak_allocated_bytes": 16846175232,
+      "peak_reserved_bytes": 16940793856,
+      "scope": "Peak since before this arm; includes resident FP16 weights, state, activation and scratch. Allocator reserve may retain blocks from the preceding arm; not encoded model size."
+    },
+    "resurface": {
+      "peak_allocated_bytes": 16897657856,
+      "peak_reserved_bytes": 16976445440,
+      "scope": "Peak since before this arm; includes resident FP16 weights, state, activation and scratch. Allocator reserve may retain blocks from the preceding arm; not encoded model size."
+    }
+  },
+  "backend_policy_matches_published_bundle": true,
+  "adapter_removal_reset_and_cache_exact": true,
+  "small_bundle_bindings_sha256": {
+    "weights/conversion_receipt.json": "55de4189a7e04c9564a48b0fbb5f37428d3d1bb5b6274831d878b41ef4686c9b",
+    "weights/weight_manifest.json": "4e7fb60f5d03c61e63324a6c25847014a26f9aa0c8d5a8c922d0f367e514fe07",
+    "state_config.pt": "6d3039d9276aafffaea5cfa93f9feef7c3b6bc4b8f9ff63f21982b8791b9c770",
+    "adapter_fp16.pt": "46cec16c6b6619808f5bc9af65da06a8889232d2842d552c9d0424ba62349a7b",
+    "evidence/training_report.json": "7b1cada0830d805482a353d875ec8f3d42f8bf59a82f48b86d583e166f96f0b8",
+    "scripts/run_fp4_ridge_resurface_v3.py": "9b026df0c7032436626bcab117a89800a4d13f25d5f533a896c901616e312dff"
+  },
+  "scope": "Independent CPU token coverage and score-arithmetic audit plus sealed-ledger bindings of recorded GPU tensor identities/storage. Packed shard bytes and GPU logits are not recomputed; dataset text hash/fingerprint are recorded metadata, not an independent online dataset fetch. Base pretraining contamination/cross-split text duplication unassessed."
+}

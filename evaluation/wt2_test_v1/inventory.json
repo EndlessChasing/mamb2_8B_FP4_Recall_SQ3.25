@@ -1,0 +1,56 @@
+{
+  "format": "FP4_SQ325_WT2_TEST_PUBLIC_EVIDENCE_INVENTORY_V1",
+  "complete": true,
+  "model_release_tag": "v0.1.0-fp4g16-sq325-resurface",
+  "measured_github_commit": "c15ca4f8f7178f7956076e3d124fe19abbb77cd3",
+  "measured_hf_commit": "6ddb462279d2e9bc9fd92c9bb1e14400cfb96176",
+  "sealed_bundle_manifest_sha256": "130865c8e133cfa6a3298b114197a3791cbd6cdc9d33020e5f404c30fe807208",
+  "frozen_checkpoint_test_selection": false,
+  "ppl": {
+    "without_resurface": 8.327234815511874,
+    "resurface": 7.508139013005539
+  },
+  "windows": 147,
+  "target_tokens": 300963,
+  "raw_token_ids_included": false,
+  "report_transformations": null,
+  "files": {
+    "docs/FP4_G16_SQ325_RESURFACE_WT2_TEST_V1_PROTOCOL.md": {
+      "bytes": 2702,
+      "sha256": "431fb26ecf97f3a4411e9e54319fc6d6c2f04b24274c8e2e7fa2a15d66170180"
+    },
+    "evaluation/wt2_test_v1/README.md": {
+      "bytes": 5956,
+      "sha256": "e6da4e907559e4daedb66069a458f5218ef0f84958183f5c962331fc8fb54e01"
+    },
+    "evaluation/wt2_test_v1/comparison.json": {
+      "bytes": 243469,
+      "sha256": "b9d1aa9537effc60a1aca062e4e99fd6fbcc16a971418ab37c7345b87a0b500a"
+    },
+    "evaluation/wt2_test_v1/cpu_audit_v1.json": {
+      "bytes": 4078,
+      "sha256": "bbae605beb81695cc7aba2618fc88444d64ed553c1b302b898d940e1c80ca03d"
+    },
+    "evaluation/wt2_test_v1/resurface.json": {
+      "bytes": 457862,
+      "sha256": "8aa25d6466c1c39cece9023f06e3ba5de05b166368b95367ee4a823a2f62d2c3"
+    },
+    "evaluation/wt2_test_v1/without_resurface.json": {
+      "bytes": 436816,
+      "sha256": "020370914c2f88d5ad2302b4af06f1c8d5e9dd36df1f66d7ed472dcf73f8d1f6"
+    },
+    "scripts/audit_fp4_sq325_wt2_test_v1.py": {
+      "bytes": 23668,
+      "sha256": "73b7bcc03b6010f4f3d629de9fb3cb80262a23350cbe4e9e40b7d426e09061fc"
+    },
+    "scripts/reconstruct_fp4_wt2_test_tokens_v1.py": {
+      "bytes": 2679,
+      "sha256": "350cd46e9d99a50d95f93a2e88c7b80625a9341a524d6cb51e9a2425aaaee4e6"
+    },
+    "scripts/run_fp4_sq325_wt2_test_v1.py": {
+      "bytes": 9188,
+      "sha256": "979dab9044fad2b1a35d2bf7802ce3854ac54631c371af8641523359e666110c"
+    }
+  },
+  "scope": "Added evaluation evidence and reproduction sources only. Root README and this inventory are outside the inventory to avoid self-reference; sealed model bundle files and original release tag are not changed."
+}

@@ -30,34 +30,76 @@ Transformers `AutoModel.from_pretrained` entry point.
 
 ## Measured quality
 
-| Configuration | WikiText-2 validation PPL | Normal MK, correct / 384 | Target-removed matches / 384 |
+### Full official WikiText-2 test PPL — fixed published checkpoint
+
+| Configuration | WikiText-2 test PPL |
+|---|---:|
+| FP4 G16 + ridge SQ3.25, without Resurface | 8.32723482 |
+| Same frozen base and state + released Resurface | **7.50813901** |
+
+The adapter reduces pooled-token test PPL by **9.84%**. Both arms score all
+**300,963 next-token targets in 147 windows**, including the final partial
+window of 1,955 targets. All 147 paired windows have lower NLL with the adapter.
+The model, state codec, and final adapter are the byte-identical artifacts from
+`v0.1.0-fp4g16-sq325-resurface`; this evaluation did not train, recalibrate,
+select a checkpoint, or change the published configuration based on test scores.
+
+**Test protocol:** pinned `Salesforce/wikitext`, `wikitext-2-raw-v1`, official
+`test` split at revision `b08601e04326c79dfdd32d625aee71d232d685c3`;
+NVIDIA SentencePiece tokenizer without automatic BOS/EOS; documents joined by
+two newlines. State resets per window, with up to 2,048 next-token targets,
+one boundary-token overlap, and state requantization every token. PPL is
+`exp(total NLL / 300963)` with FP16 computation and FP32 logits.
+
+**Data scope:** adapter training used the separate official TRAIN split and
+pinned numeric TRAIN examples. The test scores were measured after publication
+with the frozen final adapter, without test-driven selection. Earlier 2.7B
+experiments in this research project used the official WT2 test text, so this
+is not an untouched test for the whole project. Source-model pretraining
+contamination and cross-split text duplication have not been audited.
+
+The exact test [comparison](evaluation/wt2_test_v1/comparison.json),
+[adapter-free arm](evaluation/wt2_test_v1/without_resurface.json),
+[adapted arm](evaluation/wt2_test_v1/resurface.json), and
+[CPU audit](evaluation/wt2_test_v1/cpu_audit_v1.json) include per-window scores
+and token hashes, without publishing raw token IDs. The CPU audit verifies
+token coverage, pooled NLL/PPL arithmetic, storage, and the recorded tensor
+bindings to the sealed release. It does not recompute GPU logits or packed
+weight shards. See [reproduction instructions](evaluation/wt2_test_v1/README.md)
+and the [frozen protocol](docs/FP4_G16_SQ325_RESURFACE_WT2_TEST_V1_PROTOCOL.md).
+
+### Historical validation and published MK CONFIRM results
+
+| Configuration | WikiText-2 validation PPL | Published normal MK, correct / 384 | Published target-removed matches / 384 |
 |---|---:|---:|---:|
 | FP4 G16 + ridge SQ3.25, without Resurface | 8.40828258 | 37 | 0 |
 | Same frozen base and state + released Resurface | **7.58730687** | **255** | 0 |
 
-The paired normal-MK gain is **56.77 percentage points**;
-its paired-bootstrap 95% interval is **51.30 to 61.98
-percentage points** (10,000 draws). The release passes the fixed
-condition **full PPL strictly below 8.0** and a positive normal-MK gain with a
-strictly positive paired-bootstrap lower bound. The independent CPU audit
-binds the measured reports, training export, source code, and weight hashes.
-Removing the adapter exactly restores the frozen parent reset output and cache.
+These are the original release measurements. Validation PPL uses 130 windows
+and 264,764 next-token targets, including the final partial window. This
+validation set was used during development and is not an untouched test.
+The original release passed its fixed validation gate: full PPL below 8.0 and
+a positive paired normal-MK gain with a strictly positive bootstrap lower bound.
 
-**Evaluation scope:** PPL uses the pinned `wikitext-2-raw-v1` validation split,
-130 windows with up to 2,048 input/target tokens per window, and **264,764
-next-token targets**. Recurrent state resets at each window; probabilities are
-computed with quantized state updated at every token. The final partial window
-is included. This validation set has been used during development; the result
-is not an untouched-test estimate. The pinned normal/target-removed MK protocol
-contains 768 paired cases, split into 384 ordinary recall prompts and 384 prompts
-with the queried binding removed. Each case uses greedy generation of at most
-12 tokens. A target-removed match is an output matching the removed value; it
-does not measure successful retrieval from the prompt.
+**MK was not rerun for this WT2 test update.** It remains the original synthetic
+CONFIRM benchmark: 384 ordinary recall prompts and 384 target-removed prompts,
+with greedy generation of at most 12 tokens. The paired normal-MK gain is
+56.77 percentage points, with a 95% paired-bootstrap interval of 51.30–61.98
+points (10,000 draws). A target-removed match means matching the removed value;
+it does not measure successful retrieval from the prompt. These recall results
+are not WT2-test MK or a newly collected test benchmark.
 
-The exact arm reports are `evidence/ridge_parent.json` and
-`evidence/ridge_resurface.json`; the paired result is
-`evidence/comparison.json`, with its independent `evidence/audit.json`.
-Hashes in `manifest.json` and `SHA256SUMS` bind these files to the release.
+The historical arm reports are `evidence/ridge_parent.json` and
+`evidence/ridge_resurface.json` inside the original bundle, with
+`evidence/comparison.json` and `evidence/audit.json`. The bundle manifest and
+checksums bind those original files. Removing the adapter exactly restores
+the frozen parent reset output and cache.
+
+The current repository card and `evaluation/wt2_test_v1/` are a documentation
+update. The original release tag, packed weights, state configuration, adapter,
+and sealed bundle files remain unchanged. Original publication receipts at the
+HF root describe the initial tagged snapshot; the separate test
+[inventory](evaluation/wt2_test_v1/inventory.json) binds this added evidence.
 
 ## Storage and runtime memory
 
@@ -227,7 +269,8 @@ Key identities:
 - Packed weight manifest SHA-256: `4e7fb60f5d03c61e63324a6c25847014a26f9aa0c8d5a8c922d0f367e514fe07`.
 - Tokenizer SHA-256: `5862e2f71caf762bc9845662be5fec2867deb58d874568235a02a36c5111cd09`.
 - Released adapter SHA-256: `46cec16c6b6619808f5bc9af65da06a8889232d2842d552c9d0424ba62349a7b`.
-- Full comparison SHA-256: `bfb94f7035c12cc41be1969ee7c4c9407db05aee1103cc56cc7fb7a3128bfd16`.
+- Full WT2 test comparison SHA-256: `b9d1aa9537effc60a1aca062e4e99fd6fbcc16a971418ab37c7345b87a0b500a`.
+- Historical validation/MK comparison SHA-256: `bfb94f7035c12cc41be1969ee7c4c9407db05aee1103cc56cc7fb7a3128bfd16`.
 
 The weights reload without the original checkpoint, with all 507 decoded
 tensor hashes exactly matching the weight ledger used for quality evaluation.
